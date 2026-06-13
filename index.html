@@ -4,467 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sibling Systems — Embedded UX Research for Product Teams</title>
+<meta name="description" content="Your AI is only as accurate as your freshest user data. Sibling Systems builds the research pipeline that keeps it true. Embedded UX research for product teams.">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sibling Systems">
+<meta property="og:title" content="Sibling Systems — Embedded UX Research for Product Teams">
+<meta property="og:description" content="Your AI is only as accurate as your freshest user data. Sibling Systems builds the research pipeline that keeps it true.">
+<meta property="og:url" content="https://siblingsystems.limited">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sibling Systems — Embedded UX Research for Product Teams">
+<meta name="twitter:description" content="Your AI is only as accurate as your freshest user data. Sibling Systems builds the research pipeline that keeps it true.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #F5F3EE;
-    --ink: #1C1C1A;
-    --muted: #7A776F;
-    --rule: #D8D4CC;
-    --accent: #2A4038;
-    --accent-light: #3D5C51;
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'IBM Plex Sans', system-ui, sans-serif;
-  }
-
-  html { font-size: 16px; scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-  a:hover { color: var(--accent); }
-
-  /* ── NAV ── */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.75rem 3rem;
-    border-bottom: 0.5px solid var(--rule);
-  }
-
-  .nav-logo {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 1.05rem;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    color: var(--ink);
-  }
-
-  .nav-cta {
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--accent);
-    border: 0.5px solid var(--accent);
-    padding: 0.45rem 1.1rem;
-    transition: background 0.15s, color 0.15s;
-  }
-
-  .nav-cta:hover {
-    background: var(--accent);
-    color: var(--bg);
-  }
-
-  /* ── SECTIONS ── */
-  section {
-    padding: 5rem 3rem;
-    border-bottom: 0.5px solid var(--rule);
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  section:last-of-type { border-bottom: none; }
-
-  /* ── HERO ── */
-  .hero {
-    padding: 7rem 3rem 6rem;
-    max-width: 900px;
-    margin: 0 auto;
-    border-bottom: 0.5px solid var(--rule);
-  }
-
-  .hero-label {
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 2rem;
-  }
-
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 0.4rem;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero-sub {
-    font-family: var(--sans);
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: var(--muted);
-    margin: 1.75rem 0 2.5rem;
-    max-width: 520px;
-    line-height: 1.65;
-  }
-
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--bg);
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    font-weight: 400;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0.75rem 1.75rem;
-    transition: background 0.15s;
-  }
-
-  .btn-primary:hover { background: var(--accent-light); color: var(--bg); }
-
-  .hero-post-link {
-    font-size: 0.85rem;
-    color: var(--muted);
-    font-weight: 300;
-  }
-
-  .hero-post-link a { color: var(--ink); }
-
-  /* ── SECTION LABELS ── */
-  .section-label {
-    font-size: 0.72rem;
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 2.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-    background: var(--rule);
-    max-width: 80px;
-  }
-
-  /* ── WHAT WE DO ── */
-  .what h2 {
-    font-family: var(--serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 300;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    max-width: 620px;
-    margin-bottom: 1.5rem;
-  }
-
-  .what p {
-    font-size: 0.97rem;
-    color: var(--muted);
-    max-width: 560px;
-    line-height: 1.75;
-  }
-
-  /* ── HOW IT WORKS ── */
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-  }
-
-  .step-num {
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--rule);
-    margin-bottom: 0.75rem;
-    line-height: 1;
-  }
-
-  .step h3 {
-    font-family: var(--sans);
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    margin-bottom: 0.6rem;
-  }
-
-  .step p {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  /* ── PROOF ── */
-  .proof-intro {
-    font-size: 0.97rem;
-    color: var(--muted);
-    max-width: 540px;
-    margin-bottom: 3rem;
-    line-height: 1.75;
-  }
-
-  .proof-numbers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 0.5px;
-    background: var(--rule);
-    border: 0.5px solid var(--rule);
-  }
-
-  .proof-stat {
-    background: var(--bg);
-    padding: 2rem 1.5rem;
-  }
-
-  .proof-stat-num {
-    font-family: var(--serif);
-    font-size: 2.8rem;
-    font-weight: 300;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-
-  .proof-stat-label {
-    font-size: 0.78rem;
-    color: var(--muted);
-    font-weight: 400;
-    line-height: 1.4;
-  }
-
-  .proof-source {
-    margin-top: 1.25rem;
-    font-size: 0.75rem;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-  }
-
-  /* ── SERVICES ── */
-  .services-grid {
-    display: grid;
-    gap: 0.5px;
-    background: var(--rule);
-    border: 0.5px solid var(--rule);
-    margin-top: 3rem;
-  }
-
-  .service {
-    background: var(--bg);
-    padding: 2rem 2rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
-    align-start: start;
-  }
-
-  .service-tag {
-    grid-column: 1 / -1;
-    font-size: 0.7rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.25rem;
-  }
-
-  .service h3 {
-    font-family: var(--serif);
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 0.6rem;
-  }
-
-  .service p {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 520px;
-  }
-
-  .service-price {
-    font-size: 0.8rem;
-    color: var(--muted);
-    font-weight: 300;
-    white-space: nowrap;
-    padding-top: 0.25rem;
-    text-align: right;
-  }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-  }
-
-  .testimonial {
-    border-left: 2px solid var(--accent);
-    padding-left: 1.5rem;
-  }
-
-  .testimonial blockquote {
-    font-family: var(--serif);
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.65;
-    color: var(--ink);
-    margin-bottom: 1.25rem;
-  }
-
-  .testimonial-attr {
-    font-size: 0.78rem;
-    font-weight: 400;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-  }
-
-  .testimonial-attr strong {
-    display: block;
-    color: var(--ink);
-    font-weight: 500;
-    font-size: 0.82rem;
-    margin-bottom: 0.15rem;
-  }
-
-  /* ── ABOUT ── */
-  .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .about h2 {
-    font-family: var(--serif);
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 300;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.25rem;
-  }
-
-  .about p {
-    font-size: 0.92rem;
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .about-credentials {
-    list-style: none;
-    border-top: 0.5px solid var(--rule);
-    padding-top: 1.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .about-credentials li {
-    font-size: 0.8rem;
-    color: var(--muted);
-    padding: 0.5rem 0;
-    border-bottom: 0.5px solid var(--rule);
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .about-credentials li span {
-    color: var(--ink);
-    font-weight: 400;
-  }
-
-  /* ── CTA / FOOTER ── */
-  .cta-section {
-    padding: 6rem 3rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .cta-section h2 {
-    font-family: var(--serif);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    margin-bottom: 1rem;
-  }
-
-  .cta-section p {
-    font-size: 0.95rem;
-    color: var(--muted);
-    margin-bottom: 2.5rem;
-    max-width: 440px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-  }
-
-  footer {
-    border-top: 0.5px solid var(--rule);
-    padding: 2rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  footer p {
-    font-size: 0.75rem;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-  }
-
-  footer a { color: var(--muted); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 680px) {
-    nav { padding: 1.25rem 1.5rem; }
-    .hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    .service { grid-template-columns: 1fr; }
-    .service-price { text-align: left; }
-    footer { flex-direction: column; gap: 0.75rem; text-align: center; }
-    .cta-section { padding: 4rem 1.5rem; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">Sibling Systems</a>
-  <a href="mailto:ian@siblingsystems.limited" class="nav-cta">Get in touch</a>
+  <div class="nav-links">
+    <a href="writing/" class="nav-link">Writing</a>
+    <a href="case-study.html" class="nav-link">Case Study</a>
+    <a href="mailto:ian@siblingsystems.limited" class="nav-cta">Get in touch</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -472,9 +38,10 @@
   <p class="hero-label">Embedded UX Research · Denver, CO</p>
   <h1>Faster research.<br><em>Fewer wrong turns.</em></h1>
   <p class="hero-sub">Rigorous mixed-methods research, embedded in your product team. We build the practice, run the studies, and help your team make sharper decisions — faster.</p>
+  <p class="hero-ai-line">Your AI is only as accurate as your freshest user data. We build the pipeline that keeps it true.</p>
   <div class="hero-actions">
     <a href="mailto:ian@siblingsystems.limited" class="btn-primary">Start a conversation</a>
-    <p class="hero-post-link">Read the case study → <a href="https://linkedin.com/in/inhll" target="_blank">How we built Rolling Research at Thumbtack</a></p>
+    <p class="hero-post-link">Read the case study → <a href="case-study.html">How we built Rolling Research at Thumbtack</a></p>
   </div>
 </div>
 
@@ -512,7 +79,7 @@
     <div class="step">
       <div class="step-num">05</div>
       <h3>AI Accelerated</h3>
-      <p>We understand where AI can speed us up, and where it's important for humans to stay in the loop. We build and iterate on robust AI prompts to improve effectuation.</p>
+      <p>We understand where AI speeds things up and where humans need to stay in the loop. Research outputs are structured and dated so your AI and RAG systems can ingest them — keeping your assistant's knowledge current as users and markets move.</p>
     </div>
     <div class="step">
       <div class="step-num">06</div>
@@ -540,20 +107,78 @@
       <div class="proof-stat-label">Stakeholder CSAT score, post-project surveys</div>
     </div>
     <div class="proof-stat">
-      <div class="proof-stat-num">75%</div>
+      <div class="proof-stat-num">+75%</div>
       <div class="proof-stat-label">Increase in research volume vs. the prior year pilot</div>
     </div>
   </div>
-  <p class="proof-source">Source: Thumbtack Rolling Research Program, 2025. <a href="https://linkedin.com/in/inhll" target="_blank">Read the full case study →</a></p>
+  <p class="proof-source">Source: Thumbtack Rolling Research Program, 2025. <a href="case-study.html">Read the full case study →</a></p>
 </section>
 
 <!-- SERVICES -->
 <section>
   <p class="section-label">Services</p>
+
+  <div class="ladder-strip">
+    <span class="ladder-strip-label">The ladder</span>
+    <div class="ladder-step">
+      <span class="ladder-step-name">Diagnose</span>
+      <span class="ladder-step-offer">Audit</span>
+    </div>
+    <span class="ladder-arrow">→</span>
+    <div class="ladder-step">
+      <span class="ladder-step-name">Learn</span>
+      <span class="ladder-step-offer">Playbook</span>
+    </div>
+    <span class="ladder-arrow">→</span>
+    <div class="ladder-step">
+      <span class="ladder-step-name">Build</span>
+      <span class="ladder-step-offer">Sprint</span>
+    </div>
+    <span class="ladder-arrow">→</span>
+    <div class="ladder-step">
+      <span class="ladder-step-name">Run</span>
+      <span class="ladder-step-offer">Retainer</span>
+    </div>
+  </div>
+
   <div class="services-grid">
 
     <div class="service">
-      <span class="service-tag">Core offering</span>
+      <span class="service-tag">Diagnose · Fixed scope · 2 weeks</span>
+      <div>
+        <h3>AI Ground Truth Audit</h3>
+        <p>How stale is the user knowledge feeding your AI? We inventory the corpus — help docs, personas, research repos, support tickets — and date-stamp everything: what percentage of what your AI "knows" about users was verified this quarter? This year? Ever? We map drift risk by decision exposure (the Air Canada check: what is your AI promising that nobody verified?), flag AI-feeding-AI recursion loops, and deliver a Flash Findings report with a prioritized fix list and a recommended research cadence design.</p>
+        <p class="service-credit">Audit fee credited 100% toward a Setup Sprint if signed within 60 days.</p>
+      </div>
+      <div class="service-price">$7,500<br>Fixed fee</div>
+    </div>
+
+    <div class="service">
+      <span class="service-tag">Learn · Workshop · Coming soon</span>
+      <div>
+        <h3>The Rolling Research Playbook</h3>
+        <p>A half-day remote workshop teaching your team how to build and run a high-velocity embedded research program. Built on the Thumbtack proof case. Ideal for research leads, PMs, and founders ready to invest in research infrastructure. Private-team option available: half-day remote for up to 12 people, using your team's real intake and triage problems as working material.</p>
+        <!-- Formspree waitlist: create a free form at formspree.io, then replace FORMSPREE_FORM_ID with your form ID -->
+        <form class="waitlist-form" action="https://formspree.io/f/FORMSPREE_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Playbook waitlist">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Join waitlist</button>
+        </form>
+      </div>
+      <div class="service-price">$500–1,500 / seat<br>Private team: $7,500</div>
+    </div>
+
+    <div class="service">
+      <span class="service-tag">Build · One-time engagement</span>
+      <div>
+        <h3>Rolling Research Setup Sprint</h3>
+        <p>We build the infrastructure — intake forms, triage rituals, Slack workflows, output templates, CSAT loops — and hand it off ready to run. Ideal for teams that want to own the practice internally once it's established. Optionally includes <strong>AI Corpus Integration</strong>: structuring your research outputs so your AI and RAG systems can ingest them — dated, tagged, and retrieval-friendly, so fresh findings actually reach the machine that needs them.</p>
+      </div>
+      <div class="service-price">Fixed scope<br>Contact for pricing</div>
+    </div>
+
+    <div class="service">
+      <span class="service-tag">Run · Monthly retainer</span>
       <div>
         <h3>Rolling Research Retainer</h3>
         <p>An embedded, ongoing research practice for your team. Includes intake system setup, weekly triage, moderated research sessions (interviews, usability tests, concept evaluations, surveys), and Flash Findings outputs. Built to scale with your team and outlast our engagement.</p>
@@ -562,21 +187,12 @@
     </div>
 
     <div class="service">
-      <span class="service-tag">One-time engagement</span>
+      <span class="service-tag">Sustain · Advisory</span>
       <div>
-        <h3>Rolling Research Setup Sprint</h3>
-        <p>We build the infrastructure — intake forms, triage rituals, Slack workflows, output templates, CSAT loops — and hand it off ready to run. Ideal for teams that want to own the practice internally once it's established.</p>
+        <h3>Fractional Research Lead</h3>
+        <p>Ongoing senior oversight for teams that built the practice and want experienced eyes on it. Includes weekly office hours, triage attendance, and async review — no session delivery. For teams that have the practice running and want a principal researcher thinking alongside them.</p>
       </div>
-      <div class="service-price">Fixed scope<br>Contact for pricing</div>
-    </div>
-
-    <div class="service">
-      <span class="service-tag">Workshop · Coming soon</span>
-      <div>
-        <h3>The Rolling Research Playbook</h3>
-        <p>A half-day remote workshop teaching your team how to build and run a high-velocity embedded research program. Built on the Thumbtack proof case. Ideal for research leads, PMs, and founders ready to invest in research infrastructure.</p>
-      </div>
-      <div class="service-price">$500–1,500 / seat<br>Remote, half-day</div>
+      <div class="service-price">Advisory<br>Contact for pricing</div>
     </div>
 
   </div>
@@ -639,9 +255,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Sibling Systems Limited &nbsp;·&nbsp; Denver, CO</p>
+  <p>© 2026 Sibling Systems Limited &nbsp;·&nbsp; Denver, CO</p>
   <p><a href="https://linkedin.com/in/inhll" target="_blank">Ian Hall on LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:ian@siblingsystems.limited">ian@siblingsystems.limited</a></p>
-  <p>Why Sibling Systems? We work with people to understand other people – we are all siblings working to co-create systems of shared meaning.</p>
+  <p>Why Sibling Systems? We work with people to understand other people — we are all siblings working to co-create systems of shared meaning.</p>
 </footer>
 
 </body>
