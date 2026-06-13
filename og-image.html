@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: #F5F3EE;
+    font-family: 'Fraunces', Georgia, serif;
+    color: #1C1C1A;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .brand img { width: 64px; height: 64px; display: block; }
+  .brand span {
+    font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; letter-spacing: 0.01em;
+  }
+  .eyebrow {
+    font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: 16px;
+    letter-spacing: 0.16em; text-transform: uppercase; color: #7A776F; margin-bottom: 26px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif; font-weight: 300; font-size: 66px; line-height: 1.08;
+    letter-spacing: -0.02em; max-width: 1000px;
+  }
+  h1 em { font-style: italic; color: #2A4038; }
+  .foot {
+    font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; font-size: 19px; color: #7A776F;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .foot strong { color: #1C1C1A; font-weight: 500; }
+  .rule { width: 64px; height: 3px; background: #2A4038; margin-bottom: 22px; }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <img src="logo.svg" alt="">
+    <span>Sibling Systems</span>
+  </div>
+  <div>
+    <div class="rule"></div>
+    <p class="eyebrow">Embedded UX Research</p>
+    <h1>Your AI is only as accurate as your <em>freshest user data.</em></h1>
+  </div>
+  <p class="foot"><strong>We build the pipeline that keeps it true.</strong> &nbsp;·&nbsp; siblingsystems.limited</p>
+</body>
+</html>

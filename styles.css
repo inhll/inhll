@@ -37,12 +37,22 @@ nav {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--serif);
   font-weight: 400;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
   text-decoration: none;
   color: var(--ink);
+}
+
+.nav-mark {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  flex-shrink: 0;
 }
 
 .nav-links {
