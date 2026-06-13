@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="canonical" href="https://siblingsystems.limited/">
 <title>Sibling Systems — Embedded UX Research for Product Teams</title>
 <meta name="description" content="Your AI is only as accurate as your freshest user data. Sibling Systems builds the research pipeline that keeps it true. Embedded UX research for product teams.">
 
@@ -22,6 +24,111 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://siblingsystems.limited/#organization",
+      "name": "Sibling Systems",
+      "url": "https://siblingsystems.limited",
+      "description": "Embedded UX research consultancy specializing in Rolling Research — a continuous, cadenced user research practice that keeps company AI systems accurate.",
+      "founder": {
+        "@id": "https://siblingsystems.limited/#ian-hall"
+      },
+      "location": {
+        "@type": "Place",
+        "addressLocality": "Denver",
+        "addressRegion": "CO"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/inhll"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://siblingsystems.limited/#ian-hall",
+      "name": "Ian Hall",
+      "jobTitle": "Principal UX Researcher",
+      "description": "Principal UX Researcher with 10+ years of mixed-methods research experience. MS HCI, DePaul University.",
+      "url": "https://siblingsystems.limited",
+      "sameAs": [
+        "https://linkedin.com/in/inhll"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "DePaul University"
+      },
+      "knowsAbout": [
+        "UX research",
+        "user research operations",
+        "Rolling Research",
+        "research infrastructure",
+        "AI knowledge management",
+        "continuous discovery"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://siblingsystems.limited/#audit",
+      "name": "AI Ground Truth Audit",
+      "provider": {
+        "@id": "https://siblingsystems.limited/#organization"
+      },
+      "description": "A 2-week fixed-scope diagnostic that inventories the user-knowledge corpus feeding a company's AI, dates every source, maps drift risk by decision exposure, and delivers a Flash Findings report with a prioritized fix list.",
+      "url": "https://siblingsystems.limited/audit.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "7500",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://siblingsystems.limited/#playbook",
+      "name": "The Rolling Research Playbook",
+      "provider": {
+        "@id": "https://siblingsystems.limited/#organization"
+      },
+      "description": "A half-day remote workshop teaching teams how to build and run a high-velocity embedded research program. Per-seat or private-team format using the team's real intake and triage problems.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "500",
+        "highPrice": "1500",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://siblingsystems.limited/#sprint",
+      "name": "Rolling Research Setup Sprint",
+      "provider": {
+        "@id": "https://siblingsystems.limited/#organization"
+      },
+      "description": "A fixed-scope build of the research infrastructure — intake forms, triage rituals, Slack workflows, output templates, CSAT loops — handed off ready to run. Optional AI Corpus Integration structures outputs for RAG ingestion."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://siblingsystems.limited/#retainer",
+      "name": "Rolling Research Retainer",
+      "provider": {
+        "@id": "https://siblingsystems.limited/#organization"
+      },
+      "description": "An embedded, ongoing research practice: intake system, weekly triage, moderated sessions, and Flash Findings outputs, built to scale with the team and outlast the engagement."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://siblingsystems.limited/#fractional",
+      "name": "Fractional Research Lead",
+      "provider": {
+        "@id": "https://siblingsystems.limited/#organization"
+      },
+      "description": "Ongoing senior advisory for teams that built the practice and want experienced oversight: weekly office hours, triage attendance, and async review, with no session delivery."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -150,7 +257,7 @@
       <div>
         <h3>AI Ground Truth Audit</h3>
         <p>How stale is the user knowledge feeding your AI? We inventory the corpus — help docs, personas, research repos, support tickets — and date-stamp everything: what percentage of what your AI "knows" about users was verified this quarter? This year? Ever? We map drift risk by decision exposure (the Air Canada check: what is your AI promising that nobody verified?), flag AI-feeding-AI recursion loops, and deliver a Flash Findings report with a prioritized fix list and a recommended research cadence design.</p>
-        <p class="service-credit">Audit fee credited 100% toward a Setup Sprint if signed within 60 days.</p>
+        <p class="service-credit">Audit fee credited 100% toward a Setup Sprint if signed within 60 days. <a href="audit.html">Learn what's included →</a></p>
       </div>
       <div class="service-price">$7,500<br>Fixed fee</div>
     </div>
@@ -160,8 +267,8 @@
       <div>
         <h3>The Rolling Research Playbook</h3>
         <p>A half-day remote workshop teaching your team how to build and run a high-velocity embedded research program. Built on the Thumbtack proof case. Ideal for research leads, PMs, and founders ready to invest in research infrastructure. Private-team option available: half-day remote for up to 12 people, using your team's real intake and triage problems as working material.</p>
-        <!-- Formspree waitlist: create a free form at formspree.io, then replace FORMSPREE_FORM_ID with your form ID -->
-        <form class="waitlist-form" action="https://formspree.io/f/FORMSPREE_FORM_ID" method="POST">
+        <!-- Formspree waitlist: create a free form at formspree.io, then replace mnjyovpz with your form ID -->
+        <form class="waitlist-form" action="https://formspree.io/f/mnjyovpz" method="POST">
           <input type="hidden" name="_subject" value="Playbook waitlist">
           <input type="email" name="email" placeholder="your@email.com" required>
           <button type="submit">Join waitlist</button>
@@ -210,6 +317,7 @@
       <div class="testimonial-attr">
         <strong>Director of UX</strong>
         Meta x Chan-Zuckerberg Initiative, Instagram
+        <div class="testimonial-project">UX research, Meta × Chan-Zuckerberg Initiative</div>
       </div>
     </div>
 
@@ -218,6 +326,7 @@
       <div class="testimonial-attr">
         <strong>Engineering Manager</strong>
         Figma
+        <div class="testimonial-project">Rapid research sessions, Figma iPad</div>
       </div>
     </div>
 

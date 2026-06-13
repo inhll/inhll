@@ -300,6 +300,7 @@ section:last-of-type { border-bottom: none; }
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 2.5rem;
+  padding: 0.75rem 0;
   flex-wrap: wrap;
 }
 
@@ -319,14 +320,14 @@ section:last-of-type { border-bottom: none; }
 }
 
 .ladder-step-name {
-  font-size: 0.75rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--ink);
   letter-spacing: 0.04em;
 }
 
 .ladder-step-offer {
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   color: var(--muted);
   font-weight: 300;
 }
@@ -472,6 +473,24 @@ section:last-of-type { border-bottom: none; }
   margin-bottom: 0.15rem;
 }
 
+.testimonial-project {
+  font-size: 0.73rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+/* Upcoming (not-yet-published) blog post rows */
+.post-item--upcoming {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: default;
+}
+
+.post-item--upcoming .post-meta {
+  font-style: italic;
+}
+
 /* ── ABOUT ── */
 .about-inner {
   display: grid;
@@ -508,8 +527,9 @@ section:last-of-type { border-bottom: none; }
   color: var(--muted);
   padding: 0.5rem 0;
   border-bottom: 0.5px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0.5rem;
 }
 
 .about-credentials li span {
