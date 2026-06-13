@@ -6,23 +6,34 @@
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="canonical" href="https://siblingsystems.limited/audit.html">
 <title>AI Ground Truth Audit — Sibling Systems</title>
-<meta name="description" content="How stale is the user knowledge feeding your AI? A 2-week fixed-scope diagnostic: corpus inventory, drift-risk map, recursion check, and a prioritized fix list. $7,500.">
+<meta name="description" content="Who owns what your AI believes? We find out in two weeks.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sibling Systems">
-<meta property="og:title" content="AI Ground Truth Audit — Sibling Systems">
-<meta property="og:description" content="How stale is the user knowledge feeding your AI? A 2-week fixed-scope diagnostic with a prioritized fix list. $7,500.">
+<meta property="og:title" content="AI Ground Truth Audit">
+<meta property="og:description" content="Who owns what your AI believes? We find out in two weeks.">
 <meta property="og:url" content="https://siblingsystems.limited/audit.html">
 <meta property="og:image" content="https://siblingsystems.limited/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://siblingsystems.limited/og-image.png">
-<meta name="twitter:title" content="AI Ground Truth Audit — Sibling Systems">
-<meta name="twitter:description" content="How stale is the user knowledge feeding your AI? A 2-week fixed-scope diagnostic with a prioritized fix list. $7,500.">
+<meta name="twitter:title" content="AI Ground Truth Audit">
+<meta name="twitter:description" content="Who owns what your AI believes? We find out in two weeks.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://siblingsystems.limited/#audit",
+  "name": "AI Ground Truth Audit",
+  "provider": { "@id": "https://siblingsystems.limited/#organization" },
+  "description": "A 2-week fixed-scope diagnostic that audits the corpus feeding a company's AI for staleness, unverified claims, and AI-feeding-AI recursion loops. Delivers a Flash Findings report with a prioritized fix list.",
+  "offers": { "@type": "Offer", "price": "7500", "priceCurrency": "USD" }
+}
+</script>
 </head>
 <body>
 
@@ -35,30 +46,42 @@
   </div>
 </nav>
 
-<article>
-<header class="case-header">
-  <p class="post-series-nav" style="margin-bottom: 1.5rem; display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Diagnose · Lead offer</p>
-  <h1>AI Ground Truth Audit</h1>
-  <p style="font-size: 1.05rem; color: var(--muted); font-family: var(--serif); font-style: italic; margin-top: 0.75rem;">How stale is the user knowledge feeding your AI?</p>
-</header>
+<section>
+  <p class="section-label">Diagnose</p>
+  <h2 style="font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 0.75rem;">AI Ground Truth Audit</h2>
+  <p class="hero-ai-line" style="margin-bottom: 2rem;">Who owns what your AI believes? We find out in two weeks.</p>
 
-<div class="case-body">
+  <p style="font-size: 0.97rem; color: var(--muted); max-width: 600px; line-height: 1.8;">Most companies shipping AI assistants can't answer a simple question: who is responsible for verifying that what the AI believes about your users and your policies is still true? That gap — corpus accountability — is what this engagement is designed to close. Before a tribunal closes it for you.</p>
 
-  <p>Your AI is only as accurate as your freshest user data. The Audit is a two-week, fixed-scope diagnostic that tells you exactly how fresh — or how stale — the knowledge feeding your AI actually is, and where that staleness is most likely to hurt.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Corpus inventory</h3>
+      <p>We catalogue every source feeding your AI: help docs, personas, research repos, policy documents, support tickets, AI-generated summaries. We date-stamp each: verified this quarter, this year, or unknown.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>RAG corpus verification</h3>
+      <p>For companies using retrieval-augmented AI (chatbots, internal assistants, search), we check whether the knowledge your retrieval layer draws from matches current reality. This is the specific gap behind the Air Canada case: the policy in the corpus didn't match the policy that existed, and no one had checked.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Drift-risk map</h3>
+      <p>We rank stale beliefs by decision exposure. Where is outdated user knowledge most likely to produce a bad product decision, a legal liability, or a confidently wrong answer to a real customer?</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>Recursion check</h3>
+      <p>We flag AI-feeding-AI loops: meeting notes summarized by a bot fed back into the knowledge base, AI-generated personas treated as research input, synthetic outputs used as ground truth. These loops quietly degrade the corpus over time.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">05</div>
+      <h3>Deliverable</h3>
+      <p>A Flash Findings report: executive summary, prioritized fix list, and a recommended research cadence design for keeping the corpus verified going forward.</p>
+    </div>
+  </div>
 
-  <h2>1 · Corpus inventory</h2>
-  <p>We catalogue every source feeding your AI's understanding of users: help docs, personas, research repos, support tickets. We date-stamp each source — verified this quarter, this year, or unknown — so you can see, at a glance, how much of what your AI "knows" about users has actually been checked against reality recently.</p>
-
-  <h2>2 · Drift-risk map</h2>
-  <p>We rank stale beliefs by decision exposure. Where is outdated user knowledge most likely to produce a bad product decision, a legal liability, or a confidently wrong assistant response? The highest-exposure gaps come first, so your fixes follow the risk.</p>
-
-  <h2>3 · Recursion check</h2>
-  <p>We flag AI-feeding-AI loops: meeting notes summarized by a bot, AI-generated personas passed back to the model, synthetic research used to train internal tools. This is the mechanism behind model collapse — happening quietly inside your own walls.</p>
-
-  <h2>4 · Deliverable</h2>
-  <p>A Flash Findings report: executive summary, prioritized fix list, and a recommended research cadence design. The fix list <em>is</em> the scope of a Setup Sprint — and the audit fee is credited 100% toward a Sprint signed within 60 days.</p>
-
-  <div class="proof-numbers" style="margin: 2.5rem 0;">
+  <div class="proof-numbers" style="margin-top: 3.5rem;">
     <div class="proof-stat">
       <div class="proof-stat-num">$7,500</div>
       <div class="proof-stat-label">Fixed fee</div>
@@ -73,10 +96,11 @@
     </div>
   </div>
 
-  <p><a href="mailto:ian@siblingsystems.limited?subject=AI Ground Truth Audit">Start with the audit →</a></p>
-
-</div>
-</article>
+  <div style="margin-top: 3rem;">
+    <a href="mailto:ian@siblingsystems.limited?subject=AI Ground Truth Audit" class="btn-primary">Start with the audit</a>
+    <p style="font-size: 0.82rem; color: var(--muted); margin-top: 1.25rem;">Questions first? <a href="mailto:ian@siblingsystems.limited">ian@siblingsystems.limited</a></p>
+  </div>
+</section>
 
 <footer>
   <p>© 2026 Sibling Systems Limited &nbsp;·&nbsp; Denver, CO</p>
