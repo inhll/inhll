@@ -16,7 +16,7 @@ The repo is `inhll/inhll`, deployed to siblingsystems.limited via **GitHub Pages
 index.html          Homepage (hero, services ladder, proof, testimonials, about)
 audit.html          AI Ground Truth Audit service page
 writing/index.html  Blog index ("Field Notes"), date-gated post list
-writing/*.html      Individual posts (the "Rolling Research × Company AI" series), slug-named
+writing/*.html      Live posts of the new weekly "Rolling Research × Company AI" series, slug-named
 styles.css          Single shared stylesheet for the whole site
 logo.svg            Brand mark
 og-image.html       Source template for the social share image
@@ -25,6 +25,10 @@ robots.txt
 sitemap.xml
 CNAME               Custom domain (siblingsystems.limited). GitHub-only — never delete or edit
 README.md           Repo readme. GitHub-only
+
+drafts-html/        (git-ignored) upcoming posts staged as HTML; git mv into writing/ to publish
+drafts-source/      (git-ignored) Ian's raw markdown drafts for the new series
+archive/            (git-ignored) the retired first 8-post series, kept as source to rework
 ```
 
 There is no local `case-study.html`. The Thumbtack case study now lives on Medium; every "Case Study" link points to that external URL (`target="_blank" rel="noopener"`). Don't re-add a local case-study page or relink to one.
@@ -39,16 +43,49 @@ There is no local `case-study.html`. The Thumbtack case study now lives on Mediu
 
 **JSON-LD** is centralized: `index.html` holds the `@graph` defining `#organization`, `#ian-hall`, and the five `Service` nodes. Other pages reference those by `@id` (e.g. `"provider": { "@id": ".../#organization" }`). Posts use `BlogPosting`; `audit.html` uses `Service`. Keep `@id`s stable.
 
-## Date-gated blog (important gotcha)
+## The blog — new weekly series
 
-`writing/index.html` **lists all 8 posts** but gates them with `data-publish="YYYY-MM-DD"`. An inline script at the bottom dims any post whose date is still in the future, removes its `href`, and relabels the meta to "Coming <date>". Once a post's file is in `writing/`, it reveals itself automatically on its date — **no manual editing of the index needed to publish.** Don't "unhide" a post by editing the index; change its `data-publish` date if the schedule changes.
+The original 8-post series was **retired**; its files sit in `archive/` (git-ignored) as raw material to rework later. Don't ship, relink, or resurrect them. The live blog is a **new weekly series**, published one post at a time. Ian's source drafts live in `drafts-source/2026-new-series-drafts.md` (git-ignored).
 
-**Publishing model (important):** only the live post(s) sit in `writing/`. Unpublished posts are held in `drafts-html/`, which is **git-ignored** so they never ship by accident — edit them there freely. To publish one, `git mv drafts-html/<slug>.html writing/<slug>.html` (a day or two before its `data-publish` date so the gated link is never dead when it opens), on a branch → PR → merge. Never `git add -f` a draft, and keep filenames as slugs (`your-moat-is-what-your-ai-eats.html`), never `post-N.html` — the sitemap, index links, and SEO all point at the slugs. Each post links prev/next via `.post-nav`.
+### Series roadmap
+
+| # | `writing/` slug | Title | Thesis | Status |
+|---|---|---|---|---|
+| 1 | `ai-convergence-commoditized-customer-contact.html` | AI convergence has commoditized everything except customer contact | Models converge on the same public data; contact with real customers is the last moat | **Live — 2026-06-20** |
+| 2 | `research-is-slow-is-a-design-flaw.html` | "Research is slow" is a design flaw, not a law | Speed is a logistics problem; the Rolling Research machine step by step (intake → Friday triage → 2-wk turnaround → Flash Findings) | Draft |
+| 3 | `alignment-is-an-information-problem.html` | Alignment is an information problem | A shared, validated corpus of Flash Findings is what alignment mechanically is — for humans and AI | Draft |
+| 4 | `synthetic-users-belong-in-your-pilot.html` | Synthetic users belong in your pilot, not your evidence | Synthetic = instrument; human = evidence. Never let synthetic responses into the corpus | Draft |
+| 5 | `i-train-my-replacement.html` | I train my replacement | The 90-day install model: build the machine, train the owner, then leave | Draft |
+
+Cadence: **one per week**, starting 2026-06-20. Dates past post 1 are provisional — confirm each with Ian before building. (Slugs for posts 2–5 are proposed here; keep them stable once a post ships.)
+
+### Voice rule (non-negotiable)
+
+**Posts are Ian's verbatim words.** Convert drafts faithfully — never rewrite, expand, tighten, reorder, or add sentences. You MAY add: section headers (with Ian's OK), inline citation links, and the house `<head>` (meta/OG/JSON-LD). You may NOT add CTA copy, pull-quotes that re-punctuate his sentences, or any editorializing. Coach, not player. Set the meta/OG/JSON-LD description to Ian's own opening line so even the SEO text is his.
+
+### Internal cross-references
+
+The drafts reference each other as "Post 1"…"Post 5" (e.g. "the collapse loop from Post 1", "the machine from Post 2", "the corpus from Post 3"). When building a post, convert those into inline links to the referenced post's slug — but only to posts already built/live; leave forward references as plain text until that post ships.
+
+### Date-gate + publishing mechanics
+
+`writing/index.html` lists each post as a `.post-item` with `data-publish="YYYY-MM-DD"`. An inline script dims any post whose date is still in the future, strips its `href`, and relabels the meta to "Coming <date>", then reveals it automatically on the day. Don't "unhide" by editing the index — change `data-publish`.
+
+Only live posts sit in `writing/`. Build upcoming posts in `drafts-html/` (git-ignored); `git mv drafts-html/<slug>.html writing/<slug>.html` a day or two before the date. Never `git add -f` a draft. Slugs only — never `post-N.html`.
 
 When you add or reschedule a post, keep these three in sync:
 1. `data-publish` in `writing/index.html`
 2. `<lastmod>` for that URL in `sitemap.xml`
 3. `datePublished` / `article:published_time` in the post's `<head>`
+
+Verified citations for this series: Shumailov et al., *Nature* (2024) — https://www.nature.com/articles/s41586-024-07566-y ; Gerstgrasser et al. (2024), arXiv:2404.01413 — https://arxiv.org/abs/2404.01413
+
+## Canonical facts (identical everywhere — site, posts, JSON-LD)
+
+- Thumbtack Rolling Research: **21 studies, 15 product teams, 94% CSAT, +75% research volume**, 2-week standard turnaround, over 9 months.
+- The pilot Ian scaled into the program was run by the agency **MeasuringU** — name it, link `https://measuringu.com/`.
+- Career: **10+ years, 85+ projects, 900+ moderated sessions**; teams at Figma, TripAdvisor, Rocket Mortgage, lululemon, Vimeo, Meta × CZI.
+- **CSAT is 94%** everywhere. (A draft of post 1 said 95%; 94% is canonical — corrected on publish.)
 
 ## Other notes
 
