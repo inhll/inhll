@@ -51,13 +51,13 @@ The original 8-post series was **retired**; its files sit in `archive/` (git-ign
 
 | # | `writing/` slug | Title | Thesis | Status |
 |---|---|---|---|---|
-| 1 | `ai-convergence-commoditized-customer-contact.html` | AI convergence has commoditized everything except customer contact | Models converge on the same public data; contact with real customers is the last moat | **Live — 2026-06-20** |
+| 1 | `ai-convergence-commoditized-customer-contact.html` | AI convergence has commoditized everything except customer contact | Models converge on the same public data; contact with real customers is the last moat | **Live — 2026-08-17** |
 | 2 | `research-is-slow-is-a-design-flaw.html` | "Research is slow" is a design flaw, not a law | Speed is a logistics problem; the Rolling Research machine step by step (intake → Friday triage → 2-wk turnaround → Flash Findings) | Draft |
 | 3 | `alignment-is-an-information-problem.html` | Alignment is an information problem | A shared, validated corpus of Flash Findings is what alignment mechanically is — for humans and AI | Draft |
 | 4 | `synthetic-users-belong-in-your-pilot.html` | Synthetic users belong in your pilot, not your evidence | Synthetic = instrument; human = evidence. Never let synthetic responses into the corpus | Draft |
 | 5 | `i-train-my-replacement.html` | I train my replacement | The 90-day install model: build the machine, train the owner, then leave | Draft |
 
-Cadence: **one per week**, starting 2026-06-20. Dates past post 1 are provisional — confirm each with Ian before building. (Slugs for posts 2–5 are proposed here; keep them stable once a post ships.)
+Cadence: **one per week**, starting 2026-08-17. Dates past post 1 are provisional — confirm each with Ian before building. (Slugs for posts 2–5 are proposed here; keep them stable once a post ships.)
 
 ### Voice rule (non-negotiable)
 
