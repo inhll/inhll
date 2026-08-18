@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="canonical" href="https://siblingsystems.limited/writing/">
+<title>Writing — Sibling Systems</title>
+<meta name="description" content="A weekly series on rolling research — why contact with real customers is the last moat AI can't commoditize, and how to build it into your shipping loop.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sibling Systems">
+<meta property="og:title" content="Writing — Sibling Systems">
+<meta property="og:description" content="A weekly series on rolling research — why contact with real customers is the last moat AI can't commoditize, and how to build it into your shipping loop.">
+<meta property="og:url" content="https://siblingsystems.limited/writing/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://siblingsystems.limited/og-image.png">
+<meta name="twitter:image" content="https://siblingsystems.limited/og-image.png">
+<meta name="twitter:title" content="Writing — Sibling Systems">
+<meta name="twitter:description" content="A weekly series on rolling research — why contact with real customers is the last moat AI can't commoditize, and how to build it into your shipping loop.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="../logo.svg" class="nav-mark" alt=""><span>Sibling Systems</span></a>
+  <div class="nav-links">
+    <a href="." class="nav-link" style="color: var(--ink);">Writing</a>
+    <a href="https://medium.com/life-thumbtack/inside-thumbtacks-rolling-research-program-how-we-build-a-high-velocity-insight-engine-55f85cdc0646" class="nav-link" target="_blank" rel="noopener">Case Study</a>
+    <a href="mailto:ian@siblingsystems.limited" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<section>
+  <p class="section-label">Field Notes</p>
+  <h2 style="font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 300; line-height: 1.3; letter-spacing: -0.01em; max-width: 620px; margin-bottom: 1rem;">Rolling Research × Company AI</h2>
+  <p style="font-size: 0.95rem; color: var(--muted); max-width: 540px; line-height: 1.75; margin-bottom: 0;">A weekly series on rolling research — why contact with real customers is the last moat AI can't commoditize, and how to build it into your shipping loop.</p>
+
+  <div class="post-list" style="margin-top: 3rem;">
+
+    <!--
+      New weekly series. Each post is gated by its data-publish date: the script at the
+      bottom dims any post whose date is still in the future (non-clickable, meta shows
+      "Coming <date>") and reveals it automatically on the day. Add each new post as a
+      .post-item here when its file lands in writing/.
+    -->
+
+    <a class="post-item" href="ai-convergence-commoditized-customer-contact.html" data-publish="2026-06-20">
+      <div>
+        <div class="post-title">AI convergence has commoditized everything except customer contact</div>
+        <div class="post-hook">While AI has totally collapsed the cost of shipping a piece of software, the cost of shipping the wrong software has never been higher.</div>
+      </div>
+      <div class="post-meta"><span class="post-date">Jun 20, 2026</span><br><span class="post-readtime">4 min read</span></div>
+    </a>
+
+  </div>
+</section>
+
+<script>
+  // Gate posts by publish date: future posts render dimmed and non-clickable.
+  (function () {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    document.querySelectorAll('.post-item[data-publish]').forEach(function (item) {
+      var pub = new Date(item.getAttribute('data-publish') + 'T00:00:00');
+      if (pub > today) {
+        item.classList.add('post-item--upcoming');
+        item.removeAttribute('href');
+        item.setAttribute('aria-disabled', 'true');
+        var meta = item.querySelector('.post-meta');
+        var d = item.querySelector('.post-date');
+        if (meta && d) meta.textContent = 'Coming ' + d.textContent;
+      }
+    });
+  })();
+</script>
+
+<footer>
+  <p>© 2026 Sibling Systems Limited &nbsp;·&nbsp; Denver, CO</p>
+  <p><a href="https://linkedin.com/in/inhll" target="_blank">Ian Hall on LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:ian@siblingsystems.limited">ian@siblingsystems.limited</a></p>
+</footer>
+
+</body>
+</html>
