@@ -2,3 +2,5 @@ drafts-html/
 archive/
 drafts-source/
 .DS_Store
+CLAUDE.md
+*.swp
